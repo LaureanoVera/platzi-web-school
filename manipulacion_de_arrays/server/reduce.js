@@ -7,5 +7,5 @@ for (let i = 0; i < totals.length; i++) {
 }
 console.log(sum);
 
-const reduce = totals.reduce((sum, item) => sum += item)
+const reduce = totals.reduce((sum, item) => sum + item)
 console.log(reduce);
