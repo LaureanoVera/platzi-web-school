@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "-": "^0.0.1",
+    "date-fns": "^2.28.0",
     "http-server": "^14.0.0"
   },
   "name": "manipulacion_de_arrays",
@@ -11,7 +12,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-client": "npx http-server client/"
   },
-  "keywords": ["arrays","javascript","node"],
+  "keywords": [
+    "arrays",
+    "javascript",
+    "node"
+  ],
   "author": "LaureanoVera",
   "license": "ISC",
   "description": ""
