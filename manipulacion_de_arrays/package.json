@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "http-server": "^14.0.0"
+  },
+  "name": "manipulacion_de_arrays",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["arrays","javascript","node"],
+  "author": "LaureanoVera",
+  "license": "ISC",
+  "description": ""
+}
