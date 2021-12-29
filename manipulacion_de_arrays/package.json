@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "http": "npx http-server client/"
+    "dev-client": "npx http-server client/"
   },
   "keywords": ["arrays","javascript","node"],
   "author": "LaureanoVera",
