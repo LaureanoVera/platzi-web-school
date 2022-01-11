@@ -11,8 +11,6 @@ const laureano = {
 laureano.skills.push("TypeScript"); // add skill manually
 laureano.learnSkills("Figma"); // add skill with a method
 
-console.log(laureano);
-
 function Student(name, age, skills) {
   return {
     name,
@@ -24,7 +22,6 @@ function Student(name, age, skills) {
   };
 }
 const ivan = Student("Ivan", 20, ["NodeJS", "Express"]);
-console.log(ivan);
 
 function StudentTwo(name, age, skills) {
   this.name = name;
@@ -33,4 +30,27 @@ function StudentTwo(name, age, skills) {
 }
 Student.prototype.learnSkills = (skill) => this.skills.push(skill);
 const gerardo = new StudentTwo("Gerardo", 21, ["Python", "Data Science"]);
-console.log(gerardo);
+
+// Prototipos con la sintaxis de clases
+class StudentThree {
+  // constructor(name, age, skills) {
+  constructor({
+    // con destructuracion
+    name,
+    age,
+    skills,
+    element,
+  }) {
+    this.name = name;
+    this.age = age;
+    this.skills = skills;
+  }
+
+  learnSkills(skill) {
+    this.skills.push(skill);
+  }
+}
+
+const otherObj = { name: "Other", age: 19, skills: ["Swift", "Kotlin"] };
+const other = new StudentThree(otherObj);
+other.learnSkills("Git");
