@@ -1,3 +1,28 @@
+function videoPlay(id) {
+  const secretUrl = `https://platziultrasecretomasquelanasa.com/${id}`;
+  console.log(`Play ${secretUrl}`);
+}
+
+function videoPause(id) {
+  const secretUrl = `https://platziultrasecretomasquelanasa.com/${id}`;
+  console.log(`Pause ${secretUrl}`);
+}
+
+export class PlatziClass {
+  constructor({ name, videoID }) {
+    this.name = name;
+    this.videoID = videoID;
+  }
+
+  play() {
+    videoPlay(this.videoID);
+  }
+
+  pause() {
+    videoPause(this.videoID);
+  }
+}
+
 // Clase RUTA
 class LearningPath {
   constructor({ name, courses = [] }) {
@@ -17,8 +42,16 @@ class Course {
 // Clase CLASES
 class Classes {
   constructor(name, date = new Date()) {
-    this.name = name;
+    this._name = name;
     this.date = date;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(name) {
+    this._name = name;
   }
 }
 
