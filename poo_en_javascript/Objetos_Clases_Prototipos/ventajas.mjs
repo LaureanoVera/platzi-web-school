@@ -8,7 +8,7 @@ function videoPause(id) {
   console.log(`Pause ${secretUrl}`);
 }
 
-export class PlatziClass {
+class PlatziClass {
   constructor({ name, videoID }) {
     this.name = name;
     this.videoID = videoID;
@@ -33,9 +33,11 @@ class LearningPath {
 
 // Clase CURSO
 class Course {
-  constructor({ name, classes = [] }) {
+  constructor({ name, classes = [], isFree = false, onlyExpert = false }) {
     this.name = name;
     this.classes = classes;
+    this.isFree = isFree;
+    this.onlyExpert = onlyExpert;
   }
 }
 
@@ -65,6 +67,7 @@ const genericClasses = [
 const spaJs = new Course({
   name: "Single Page Application",
   classes: genericClasses,
+  onlyExpert: true,
 });
 
 const pooJs = new Course({
@@ -120,8 +123,46 @@ class Student {
   }
 }
 
+class FreeStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourses(newCourse) {
+    if (newCourse.isFree) {
+      this.approvedCourses.push(newCourse);
+    } else {
+      console.warn(`Sorry ${this.name}, you can only take open courses.`);
+    }
+  }
+}
+
+class BasicStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourses(newCourse) {
+    if (!newCourse.onlyExpert) {
+      this.approvedCourses.push(newCourse);
+    } else {
+      console.warn(`Sorry ${this.name}, this course is only for experts.`);
+    }
+  }
+}
+
+class ExpertStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourses(newCourse) {
+    this.approvedCourses.push(newCourse);
+  }
+}
+
 // Estudiantes
-const laureano = new Student({
+const laureano = new BasicStudent({
   name: "Laureano",
   username: "LaureanoVera",
   email: "laureanovera@fake.com",
