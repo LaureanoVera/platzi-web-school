@@ -1,3 +1,20 @@
+class Comment {
+  constructor({ content, studentName, studentRole = "Estudiante" }) {
+    this.content = content;
+    this.studentName = studentName;
+    this.studentRole = studentRole;
+    this.likes = 0;
+  }
+
+  post() {
+    console.log(`${this.studentName}
+    ${this.studentRole}
+    ${this.content}
+    ${this.likes} Likes
+    `);
+  }
+}
+
 function videoPlay(id) {
   const secretUrl = `https://platziultrasecretomasquelanasa.com/${id}`;
   console.log(`Play ${secretUrl}`);
@@ -134,6 +151,14 @@ class FreeStudent extends Student {
     } else {
       console.warn(`Sorry ${this.name}, you can only take open courses.`);
     }
+  }
+
+  postComment(commentContent) {
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+    });
+    comment.post();
   }
 }
 
