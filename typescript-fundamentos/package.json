@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "demo-compiler": "tsc ./src/demo.ts --target es6 --outDir dist"
+    "ts-compiler": "tsc --watch"
   },
   "keywords": [],
   "author": "LaureanoVera <laureanoigvera@gmail.com>",
