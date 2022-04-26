@@ -8,10 +8,10 @@
   customerAge += 1;
 
   let productInStock: number;
-  console.log('Product in Stock: ', productInStock);
-  if (productInStock > 10) {
-    console.log('is greater');
-  }
+  // console.log('Product in Stock: ', productInStock);
+  // if (productInStock > 10) {
+  //   console.log('is greater');
+  // }
 
   let discount = parseInt('10');
 })();
