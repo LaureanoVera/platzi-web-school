@@ -4,7 +4,7 @@ const withoutEnd = () => {
   }
 };
 
-const fail = (msg: string) => {
+const fail = (msg: string): never => {
   throw new Error(msg);
 };
 
