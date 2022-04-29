@@ -1,4 +1,4 @@
-type Sizes = "S" | "M" | "L" | "XL";
+export type Sizes = "S" | "M" | "L" | "XL";
 // type Product = {
 //   id: string | number;
 //   title: string;
