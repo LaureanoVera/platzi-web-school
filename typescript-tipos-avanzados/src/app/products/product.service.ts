@@ -1,5 +1,5 @@
 import { Product } from "./product.model";
-import { CreateProductDto } from "./productDto";
+import { CreateProductDto, UpdateProductDto } from "./productDto";
 import faker from "@faker-js/faker";
 
 export const products: Product[] = [];
@@ -23,6 +23,9 @@ export const addProduct = (data: CreateProductDto): Product => {
   return newProduct;
 };
 
-export const updateProduct = (id: string, changes: Product): void => {
+export const updateProduct = (
+  id: string | number,
+  changes: UpdateProductDto
+): void => {
   // code
 };
