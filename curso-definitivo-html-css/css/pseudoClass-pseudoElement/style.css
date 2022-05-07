@@ -1,0 +1,34 @@
+.main-nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  background-color: black;
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav__item a {
+  /* be specific in css */
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.main-nav__item a:hover {
+  color: lightblue;
+}
+
+.main-nav__item a:active {
+  color: gray;
+}
+
+.main-nav__item::after {
+  content:  " | ";
+  color: white;
+}
+
+/* pseudo class: defines the style of a special state of an element */
+/* pseudo element: defines the style of a specific part of an element */
