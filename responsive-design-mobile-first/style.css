@@ -1,0 +1,24 @@
+/* 
+1. Posicionamientos
+2. Modelo Caja
+3. Tipografia
+4. Temas Visuales
+5. Otros
+*/
+
+:root {
+  /* Colors */
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #282623;
+  --black: #201e1c;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+
+  /* Fonts */
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
