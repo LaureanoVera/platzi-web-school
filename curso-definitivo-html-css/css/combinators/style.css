@@ -1,0 +1,5 @@
+h2 + p {
+    /* 
+apply the styles to the p's that are close to h2 */
+  color: red;
+}
