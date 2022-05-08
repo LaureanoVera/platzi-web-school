@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* main {
   background-color: aqua;
   width: 100%;
@@ -8,7 +14,8 @@ p {
   font-size: 18px;
 } */
 
-body {
+/* EM */
+/* body {
   font-size: 20px;
 }
 
@@ -18,4 +25,13 @@ body {
 
 .text-container div {
   font-size: 1.2em;
+} */
+
+/* REM */
+p {
+  font-size: 1rem;
+}
+
+main div {
+  font-size: 1rem;
 }
