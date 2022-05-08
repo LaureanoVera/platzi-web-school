@@ -1,5 +1,9 @@
-h2 + p {
-    /* 
-apply the styles to the p's that are close to h2 */
+/* adjacent sibling */
+/* h2 + p {
   color: red;
+} */
+
+/* general sibling */
+h2 ~ p {
+color: red;
 }
