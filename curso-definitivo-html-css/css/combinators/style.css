@@ -4,6 +4,16 @@
 } */
 
 /* general sibling */
-h2 ~ p {
+/* h2 ~ p {
 color: red;
+} */
+
+/* child */
+/* article > p {
+  color: red;
+} */
+
+/* descendant */
+div p {
+  color: red;
 }
