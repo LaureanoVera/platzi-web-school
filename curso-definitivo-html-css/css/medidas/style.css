@@ -28,10 +28,26 @@ p {
 } */
 
 /* REM */
-p {
+/* p {
   font-size: 1rem;
 }
 
 main div {
   font-size: 1rem;
+} */
+
+/* MAX/MIN WIDTH */
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: palevioletred;
+}
+
+section {
+  width: 80%;
+  min-width: 320px;
+  max-width: 640px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: aquamarine;
 }
