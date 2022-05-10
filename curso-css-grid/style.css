@@ -1,8 +1,8 @@
 .container {
   border: 3px solid gray;
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 75px);
+  grid-template-columns: repeat(3, minmax(40px, 150px));
+  grid-template-rows: repeat(3, auto);
   column-gap: calc((100% - 90%) / 2);
   row-gap: 10px;
   grid-template-areas: 
