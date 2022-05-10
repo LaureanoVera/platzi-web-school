@@ -1,0 +1,12 @@
+.poduct-cards--container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.plans-container--slider {
+  justify-content: center;
+  overflow-x: auto;
+}
