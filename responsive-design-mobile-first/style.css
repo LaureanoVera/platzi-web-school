@@ -28,6 +28,7 @@
 html {
   font-size: 62.5%;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -485,6 +486,7 @@ main {
   line-height: 1.8rem;
   color: var(--black);
   font-family: "DM Sans", sans-serif;
+  transition: .32s;
 }
 
 .plan-card--ca span {
@@ -492,6 +494,11 @@ main {
   width: 20px;
   height: 20px;
   background-image: url('./assets/icons/orange-right-arrow.svg');
+}
+
+.plan-card--ca:hover {
+  background-color: #eae8e7;
+  cursor: pointer;
 }
 
 /* footer */
@@ -525,3 +532,6 @@ footer section {
   color: var(--just-white);
 }
 
+.footer--right img {
+  width: 80px;
+}
