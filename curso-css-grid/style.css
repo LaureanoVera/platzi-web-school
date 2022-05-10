@@ -1,0 +1,15 @@
+.container {
+  border: 3px solid gray;
+  height: auto;
+  display: grid;
+  grid-template-rows: 100px 200px;
+  grid-auto-columns: 30%;
+  grid-auto-flow: column;
+  column-gap: calc((100% - 90%) / 2);
+  row-gap: 20px;
+}
+
+.item {
+  border: 2px solid aqua;
+  font-size: 4rem;
+}
