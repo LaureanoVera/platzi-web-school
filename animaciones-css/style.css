@@ -1,5 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* clase 1 */
 body {
   counter-reset: game;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 input:checked {
@@ -8,4 +19,61 @@ input:checked {
 
 .total-count::after {
   content: counter(game);
+}
+
+/* clase 2 */
+.game__phone {
+  position: relative;
+  border: 8px solid black;
+  border-radius: 40px;
+  width: 300px;
+  height: 600px;
+  background-color: #ccefff;
+  box-shadow: 
+    0 19px 38px rgba(0,0,0,.30),
+    0 15px 12px rgba(0,0,0,.22)
+  ;
+  overflow: hidden;
+}
+
+.game__layer-1,
+.game__layer-2,
+.game__layer-3,
+.game__layer-4,
+.game__layer-5,
+.game__layer-6,
+.game__layer-7,
+.game__layer-8,
+.game__layer-9,
+.game__layer-10 {
+  position: absolute;
+}
+
+.game__layer-1 {
+  z-index: 1;
+  height: 450px;
+  width: 80px;
+  background-color: white;
+  bottom: 0;
+  right: 60px;
+}
+
+.game__layer-2 {
+  z-index: 2;
+  height: 450px;
+  width: 80px;
+  background-color: white;
+  bottom: 0;
+  left: 60px;
+}
+
+.game__layer-3 {
+  z-index: 3;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 220px;
+  height: 400px;
+  background-color: wheat;
+  bottom: 0;
 }
