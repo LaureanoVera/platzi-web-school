@@ -1,7 +1,7 @@
 export class MyDate {
   year: number;
   month: number;
-  day: number;
+  public day: number;
 
   constructor(year: number = 2002, month: number = 12, day: number = 17) {
     this.year = year;
@@ -9,13 +9,13 @@ export class MyDate {
     this.day = day;
   }
 
-  showDate = () => {
+  public showDate = () => {
     console.log('Year:', this.year);
     console.log('Month:', this.month);
     console.log('Day:', this.day);
   };
 
-  myMethod(): number {
+  public myMethod(): number {
     const result: number = Number(
       (this.year / (this.month * this.day)).toFixed(2)
     );
