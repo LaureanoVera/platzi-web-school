@@ -1,12 +1,4 @@
-const date: Date = new Date();
-
-console.log(date.getDate());
-console.log(date.getMonth());
-
-const date2: Date = new Date(2002, 11, 17, 0);
-console.log(date2);
-
-class MyDate {
+export class MyDate {
   year: number;
   month: number;
   day: number;
@@ -22,7 +14,11 @@ class MyDate {
     console.log('Month:', this.month);
     console.log('Day:', this.day);
   };
-}
 
-const myDate = new MyDate(2022, 7, 20);
-myDate.showDate();
+  myMethod(): number {
+    const result: number = Number(
+      (this.year / (this.month * this.day)).toFixed(2)
+    );
+    return result;
+  }
+}
