@@ -1,12 +1,12 @@
 export class MyDate {
   constructor(
-    private year: number = 2002,
+    private _year: number = 2002,
     public month: number = 12,
     public day: number = 17
   ) {
-    this.year = year || 2002;
-    this.month = month || 12;
-    this.day = day || 17;
+    // this.year = year || 2002;
+    // this.month = month || 12;
+    // this.day = day || 17;
   }
   // private year: number;
   // month: number;
@@ -18,6 +18,7 @@ export class MyDate {
   //   this.day = day;
   // }
 
+  // private
   private checkMonth() {
     if (this.month > 12) {
       this.month = 12;
@@ -30,18 +31,31 @@ export class MyDate {
     }
   }
 
-  public showDate = () => {
+  // public
+  public showDate(): void {
     this.checkMonth();
     this.checkDay();
-    console.log('Year:', this.year);
+    console.log('Year:', this._year);
     console.log('Month:', this.month);
     console.log('Day:', this.day);
-  };
+  }
 
+  // method
   public myMethod(): number {
     const result: number = Number(
-      (this.year / (this.month * this.day)).toFixed(2)
+      (this._year / (this.month * this.day)).toFixed(2)
     );
     return result;
+  }
+
+  // getters
+  get year() {
+    return this._year;
+  }
+
+  get isLeapYear(): boolean {
+    return (
+      (this._year % 4 == 0 && this._year % 100 != 0) || this._year % 400 == 0
+    );
   }
 }
