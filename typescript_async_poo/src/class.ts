@@ -2,7 +2,8 @@ export class MyDate {
   constructor(
     private _year: number = 2002,
     public month: number = 12,
-    public day: number = 17
+    public day: number = 17,
+    public _hour: number = 17.17
   ) {
     // this.year = year || 2002;
     // this.month = month || 12;
@@ -57,5 +58,18 @@ export class MyDate {
     return (
       (this._year % 4 == 0 && this._year % 100 != 0) || this._year % 400 == 0
     );
+  }
+
+  get hour() {
+    return this._hour;
+  }
+
+  // setters
+  set hour(newHour: number) {
+    if (newHour >= 1 && newHour <= 24) {
+      this._hour = newHour;
+    } else {
+      throw new Error('Hour out of range');
+    }
   }
 }
