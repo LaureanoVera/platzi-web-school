@@ -1,18 +1,24 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const router = express.Router();
 const port = 3000;
 
 let app = express();
 
-// ROUTER
+// USES
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(router);
 
+// ROUTES
 router.get("/message", (req, res) => {
   res.send("List message");
 });
 
 router.post("/message", (req, res) => {
-  res.send("Add message!");
+  console.log(req.query);
+  console.log(req.body);
+  res.send(`Add '${req.body.text}' message!`);
 });
 
 router.delete("/message", (req, res) => {
