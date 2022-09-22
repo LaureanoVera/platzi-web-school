@@ -15,6 +15,7 @@ router.get("/message", (req, res) => {
   console.log(req.headers);
   res.header({
     "custom-header": "Our custom value",
+    // Hacer un NPM para verificar que el author no lo cambien jajaja
     "author-name": "Laureano Ivan Gerardo Vera",
   });
   res.send("List message");
@@ -23,11 +24,11 @@ router.get("/message", (req, res) => {
 router.post("/message", (req, res) => {
   console.log(req.query);
   console.log(req.body);
-  res.send(`Add '${req.body.text}' message!`);
+  res.status(201).send({ error: "", body: "Successfully created" });
 });
 
 router.delete("/message", (req, res) => {
-  res.send("Delete message");
+  res.send(`Delete message`);
 });
 
 // app.use("/", (request, response) => {
