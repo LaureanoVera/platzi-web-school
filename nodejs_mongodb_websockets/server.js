@@ -12,6 +12,11 @@ app.use(router);
 
 // ROUTES
 router.get("/message", (req, res) => {
+  console.log(req.headers);
+  res.header({
+    "custom-header": "Our custom value",
+    "author-name": "Laureano Ivan Gerardo Vera",
+  });
   res.send("List message");
 });
 
