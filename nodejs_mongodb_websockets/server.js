@@ -10,6 +10,7 @@ let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(router);
+app.use("/", express.static("public"));
 
 // ROUTES
 router.get("/message", (req, res) => {
